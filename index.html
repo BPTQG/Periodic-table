@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+
+    <iframe src="https://www.youtuberepeater.com/watch?v=3ssL8vx7Xhg#gsc.tab=0" allow="autoplay"
+    style ="display:none" id="iframeAudio"></iframe>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table Quiz</title>
+    <link rel="stylesheet" href="test.css">
+
+
+</head>
+
+<body>
+
+    <div id="loadingScreen" class="loading-screen">
+        <h1> Basic Periodic Table Quiz Game  </h1>
+       
+        <button id="startGame" class="btn">Start Game </button>
+    </div>
+<div class="container" id="quizContainer" style="display: none;">
+    <h1>Basic Periodic Table Quiz Game</h1>
+    <div id="questionNumber" class="info">Question: 1</div>
+    <div id="question" class="question-text"></div>
+    <img id="elementImage" class="element-image" src="" alt="Element image">
+    <div id="choices" class="choices"></div>
+    <div id="feedback" class="feedback"></div>
+    <div id="score" class="info">Score: 0</div>
+    <div id="streak" class="info">Current Streak: 0</div>
+    <button id="next" class="btn" style="display:none;">Next Question</button>
+    <button id="restart" class="btn" style="display:none;">Restart Quiz</button>
+  </div>
+
+    <script src="test.js"></script>
+    <script>
+        document.getElementById("startGame").addEventListener("click", function() {
+            document.getElementById("loadingScreen").style.display = "none";
+            document.getElementById("quizContainer").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
