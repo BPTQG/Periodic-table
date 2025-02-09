@@ -202,18 +202,15 @@ function generateQuestion() {
 }
   
 function checkAnswer(userAnswer, correctAnswer) {
-  
   document.querySelectorAll('.choice').forEach(button => {
     button.disabled = true; 
   });
   
   if (userAnswer === correctAnswer) {
-    
     currentStreak++;
-    score = currentStreak; 
+    score++; // Increment total score by 1
     document.getElementById('feedback').innerText = "Correct!";
   } else {
-    
     document.getElementById('feedback').innerText = `Incorrect! The correct answer was ${correctAnswer}.`;
     currentStreak = 0;
   }
@@ -222,7 +219,6 @@ function checkAnswer(userAnswer, correctAnswer) {
   document.getElementById('streak').innerText = `Current Streak: ${currentStreak}`;
   document.getElementById('next').style.display = 'block';
 }
-
   
 document.getElementById('next').addEventListener('click', () => {
   document.getElementById('feedback').innerText = '';
