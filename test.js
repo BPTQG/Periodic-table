@@ -156,7 +156,7 @@ function generateQuestion() {
     
   
   if (showImage) {
-    document.getElementById('question').innerText = "Can you guess what's symbol in the picture?";
+    document.getElementById('question').innerText = "Can you guess what symbol is in the picture?";
     const imgElement = document.getElementById('elementImage');
     imgElement.style.display = 'block';
 
