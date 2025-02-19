@@ -124,4 +124,11 @@
     padding: 5px;
     text-align: center;
   }
+
+.choice.correct {
+    background: #28a745 !important;
+  }
   
+  .choice.incorrect {
+    background: #dc3545 !important;
+  }
