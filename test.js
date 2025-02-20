@@ -202,17 +202,30 @@ function generateQuestion() {
 }
   
 function checkAnswer(userAnswer, correctAnswer) {
-  document.querySelectorAll('.choice').forEach(button => {
-    button.disabled = true; 
-  });
+    document.querySelectorAll('.choice').forEach(button => {
+      button.disabled = true;
+      
+      if (button.innerText === correctAnswer) {
+        button.classList.add('correct');
+      }
+    
+      else if (button.innerText === userAnswer) {
+        button.classList.add('incorrect');
+      }
+    });
   
-  if (userAnswer === correctAnswer) {
-    currentStreak++;
-    score++; // Increment total score by 1
-    document.getElementById('feedback').innerText = "Correct!";
-  } else {
-    document.getElementById('feedback').innerText = `Incorrect! The correct answer was ${correctAnswer}.`;
-    currentStreak = 0;
+    if (userAnswer === correctAnswer) {
+      currentStreak++;
+      score++;
+      document.getElementById('feedback').innerText = "Correct!";
+    } else {
+      document.getElementById('feedback').innerText = `Incorrect! The correct answer was ${correctAnswer}.`;
+      currentStreak = 0;
+    }
+  
+    document.getElementById('score').innerText = `Score: ${score}`;
+    document.getElementById('streak').innerText = `Current Streak: ${currentStreak}`;
+    document.getElementById('next').style.display = 'block';
   }
   
   document.getElementById('score').innerText = `Score: ${score}`;
