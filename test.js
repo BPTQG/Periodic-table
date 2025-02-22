@@ -228,11 +228,6 @@ function checkAnswer(userAnswer, correctAnswer) {
     document.getElementById('next').style.display = 'block';
   }
   
-  document.getElementById('score').innerText = `Score: ${score}`;
-  document.getElementById('streak').innerText = `Current Streak: ${currentStreak}`;
-  document.getElementById('next').style.display = 'block';
-}
-  
 document.getElementById('next').addEventListener('click', () => {
   document.getElementById('feedback').innerText = '';
   generateQuestion();
