@@ -94,6 +94,8 @@
   .feedback {
     font-size: 1.2em;
     margin: 10px 0;
+    min-height: 40px;
+    white-space: pre-wrap;
   }
   
   .btn {
